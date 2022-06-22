@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <title>Night shift</title>
+</head>
+
+<body>
+{# Load the tag library #}
+{% load bootstrap5 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+<!--Navbar-->
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <a class="navbar-brand"
+       href="/">
+        Night shift manager
+    </a>
+    <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse"
+         id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link"
+                   href="">
+                    Products
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                   href="">
+                    Blog
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                   href="">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+{% block content %}
+
+{% endblock content %}
+
+</body>
+
+</html>
