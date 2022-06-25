@@ -22,24 +22,26 @@
 </head>
 
 <body>
-<!--Navbar-->
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
-    <a class="navbar-brand"
-       href="{% url 'index' %}">
-        Night shift manager
-    </a>
-    <button class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-target="#navbarText"
-            aria-controls="navbarText"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse"
-         id="navbarText">
-        <ul class="navbar-nav mr-auto">
+<div class="container">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand"
+               href="{% url 'index' %}">
+                Night shift manager
+            </a>
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-target="#navbarText"
+                    aria-controls="navbarText"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse"
+                 id="navbarText">
+                <ul class="navbar-nav mr-auto">
 
             <li class="nav-item">
                 <a class="nav-link"
@@ -77,9 +79,10 @@
     </div>
 </nav>
 
-{% block content %}
+    {% block content %}
 
-{% endblock content %}
+    {% endblock content %}
+</div>
 
 </body>
 
