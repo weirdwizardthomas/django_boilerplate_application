@@ -26,10 +26,25 @@ def login_user(request):
 
 def register_user(request):
     if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
-        email = request.POST['email']
-        user = User.objects.create_user(username=username, password=password, email=email)
+        user_info = request.POST
+
+        password = user_info['password']
+        password_repeat = user_info['passwordRepeat']
+
+        if not password:
+            ...  # todo error
+
+        if password != password_repeat:
+            ...  # todo error
+
+        email = user_info['email']
+        first_name = user_info['firstName']
+        surname = user_info['surname']
+        # gender = request.POST['gender']
+
+        user = User.objects.create_user(username=email, password=password, email=email, first_name=first_name,
+                                        last_name=surname)
+        login(request, user)
         return redirect('index')
     else:
         return render(request, 'authentication/register.html')
